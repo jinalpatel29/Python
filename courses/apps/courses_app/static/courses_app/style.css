@@ -1,0 +1,37 @@
+.container{
+    margin-top:20px;
+    /* max-width: 650px; */
+}
+form{
+    max-width: 600px;
+}
+
+.bottom{
+    margin-top: 50px;
+}
+
+table{
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+table th{
+    background-color: rgb(140, 154, 163);
+   
+}
+table tr td{
+    border-right: 1px solid black;
+}
+th{
+    border: 1px solid black;
+}
+span{
+    text-decoration: underline;
+    color: blue;
+}
+table tr:nth-child(even) td{
+    background-color: rgba(241, 236, 236, 0.849);
+}
+a{
+    color: black;
+    padding: 2px;
+}

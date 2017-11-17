@@ -1,0 +1,12 @@
+.container{
+    margin: 10px auto;
+    /* max-width: 600px; */
+}
+.register{
+    margin: 5px;
+    max-width: 650px;
+}
+.login{
+    margin: 5px;
+    max-width:650px;
+}

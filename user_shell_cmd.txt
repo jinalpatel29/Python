@@ -1,0 +1,43 @@
+(DJANGO~1) C:\Users\jinal\Desktop folders\Desktop\DojoAssignments\Python\Django_ORM\user_orm>python manage.py shell
+Python 2.7.13 (v2.7.13:a06454b1afa1, Dec 17 2016, 20:42:59) [MSC v.1500 32 bit (Intel)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from apps.user_login.models import *
+>>> User.objects.create(first_name="Jinal", last_name="Patel", email_address="jinalp@gmail.com", age=25)
+<User: User object>
+>>> user = User(first_name="Dalina", last_name="Dao", email_address="dalinalp@gmail.com", age=25)
+>>> user.first_name = "Denis"
+>>> user.age = 21
+>>> user.save()
+>>> User.objects.first()
+<User: User object>
+>>> User.objects.all()
+<QuerySet [<User: User object>, <User: User object>]>
+>>> User.objects.count()
+2
+>>> User.objects.order_by("last_name")
+<QuerySet [<User: User object>, <User: User object>]>
+>>> User.objects.order_by("-last_name")
+<QuerySet [<User: User object>, <User: User object>]>
+>>> User.objects.get(id=2)
+<User: User object>
+>>> User.objects.get(id=3)
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "C:\Users\jinal\DESKTO~1\Desktop\DOJOAS~1\Python\MYENVI~1\DJANGO~1\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\jinal\DESKTO~1\Desktop\DOJOAS~1\Python\MYENVI~1\DJANGO~1\lib\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+DoesNotExist: User matching query does not exist.
+>>> User.objects.create(first_name="Vishal", last_name="Patel", email_address="vishal@gmail.com", age=30)
+<User: User object>
+>>> User.objects.count()
+3
+>>> User.objects.get(id=2).delete()
+(1, {u'user_login.User': 1})
+>>> User.objects.count()
+2
+>>> user = User(first_name="", last_name="barot", email_address="jesse@gmail.com", age=20)
+>>> user = User(first_name="viral", last_name="barot", email_address="jesse@gmail.com", age=20)
+>>> user.save()
+>>>
